@@ -1,0 +1,30 @@
+# A simple project 
+
+1. 在项目根目录下执行make后会
+    - src下生成libgcdlcm.a静态库
+    - src下生成libgcdlcm.so共享库
+    - tests生成静态库和动态库的测试程序
+2. 进入tests目录执行make test进行代码的测试。如
+   果测试失败，将以diff格式输出与测试用例期望输
+   出不一致的测试结果。
+3. 回到项目目录下执行make clean清除所有生成文件
+
+
+
+├── Makefile               总的Makefile
+├── README                 说明文件
+├── src                    libgcdlcm源码目录
+│   ├── gcd.cc             最大公约数模块文件
+│   ├── gcdlcm.h           libgcdlcm库头文件
+│   ├── lcm.cc             最小共倍数模块文件
+│   └── Makefile           src的Makefile
+└── tests                  库代码测试目录
+    ├── in.txt             测试输入用例
+    ├── Makefile           tests的Makefile
+    ├── out.txt            测试用例期望输出
+    ├── test_all.sh        用于执行测试的bash脚本
+    └── test.cc            测试代码
+
+
+Junyan Ma <alexmajy@gmail.com>
+2015/12/10
